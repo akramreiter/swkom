@@ -9,7 +9,6 @@ import java.util.List;
 @Entity
 public class ParcelEntity {
 
-    // TEST FOR CI CD
     @Id
     @Pattern(regexp = "^[A-Z0-9]{9}$")
     private String trackingId;
