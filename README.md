@@ -19,3 +19,6 @@ You can view the api documentation in swagger-ui by pointing to
 http://localhost:8080/swagger-ui.html
 
 Change default port value in application.properties
+
+##note
+docker run --name some-postgis -e POSTGRES_PASSWORD=mysecretpassword -p 5433:5432 -d postgis/postgis:14-3.3
