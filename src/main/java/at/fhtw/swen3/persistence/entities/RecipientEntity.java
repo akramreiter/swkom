@@ -1,11 +1,15 @@
 package at.fhtw.swen3.persistence.entities;
 
+import at.fhtw.swen3.services.validation.City;
 import at.fhtw.swen3.services.validation.PostalCode;
+import at.fhtw.swen3.services.validation.Street;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @PostalCode
+@City
+@Street
 @Entity
 public class RecipientEntity {
     private String name;
