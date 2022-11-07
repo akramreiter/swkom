@@ -2,10 +2,14 @@ package at.fhtw.swen3.persistence.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.time.OffsetDateTime;
 
 @Entity
-public class Warehouse {
-    @Id
+public class HopArrivalEntity {
+
+    private String code;
+    private String description;
+    private OffsetDateTime dateTime;
     private Long id;
 
     public void setId(Long id) {

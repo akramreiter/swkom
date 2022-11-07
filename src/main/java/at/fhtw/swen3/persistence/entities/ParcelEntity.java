@@ -7,7 +7,7 @@ import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
-public class Parcel {
+public class ParcelEntity {
 
     @Id
     @Pattern(regexp = "^[A-Z0-9]{9}$")
@@ -16,19 +16,19 @@ public class Parcel {
     private Float weight;
     @OneToOne
     @NotNull
-    private Recipient recipient;
+    private RecipientEntity recipient;
     @OneToOne
     @NotNull
-    private Recipient sender;
+    private RecipientEntity sender;
     private State state;
     @OneToMany
     @NotNull
-    private List<HopArrival> visitedHops;
+    private List<HopArrivalEntity> visitedHops;
     @OneToMany
     @NotNull
-    private List<HopArrival> futureHops;
+    private List<HopArrivalEntity> futureHops;
 
-    public Parcel(Float weight, Recipient recipient, Recipient sender, String trackingId, State state, List<HopArrival> visitedHops, List<HopArrival> futureHops) {
+    public ParcelEntity(Float weight, RecipientEntity recipient, RecipientEntity sender, String trackingId, State state, List<HopArrivalEntity> visitedHops, List<HopArrivalEntity> futureHops) {
         this.weight = weight;
         this.recipient = recipient;
         this.sender = sender;
@@ -38,7 +38,7 @@ public class Parcel {
         this.futureHops = futureHops;
     }
 
-    public Parcel() {
+    public ParcelEntity() {
     }
 
     public Float getWeight() {
@@ -49,19 +49,19 @@ public class Parcel {
         this.weight = weight;
     }
 
-    public Recipient getRecipient() {
+    public RecipientEntity getRecipient() {
         return recipient;
     }
 
-    public void setRecipient(Recipient recipient) {
+    public void setRecipient(RecipientEntity recipient) {
         this.recipient = recipient;
     }
 
-    public Recipient getSender() {
+    public RecipientEntity getSender() {
         return sender;
     }
 
-    public void setSender(Recipient sender) {
+    public void setSender(RecipientEntity sender) {
         this.sender = sender;
     }
 
@@ -81,19 +81,19 @@ public class Parcel {
         this.state = state;
     }
 
-    public List<HopArrival> getVisitedHops() {
+    public List<HopArrivalEntity> getVisitedHops() {
         return visitedHops;
     }
 
-    public void setVisitedHops(List<HopArrival> visitedHops) {
+    public void setVisitedHops(List<HopArrivalEntity> visitedHops) {
         this.visitedHops = visitedHops;
     }
 
-    public List<HopArrival> getFutureHops() {
+    public List<HopArrivalEntity> getFutureHops() {
         return futureHops;
     }
 
-    public void setFutureHops(List<HopArrival> futureHops) {
+    public void setFutureHops(List<HopArrivalEntity> futureHops) {
         this.futureHops = futureHops;
     }
 }

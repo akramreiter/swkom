@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @PostalCode
 @Entity
-public class Recipient {
+public class RecipientEntity {
     private String name;
     private String street;
     private String postalCode;
